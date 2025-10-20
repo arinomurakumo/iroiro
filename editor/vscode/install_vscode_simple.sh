@@ -4,6 +4,11 @@
 echo "🚀 VSCode エクステンション一括インストール開始！"
 
 # 方法1: ファイルから一括インストール
-cat vscode_extensions.txt | xargs -I {} code --install-extension {} --force
+cat vscode_extensions.txt | while read -r extension_id; do
+    if [ -n "$extension_id" ]; then
+        echo "📦 インストール中: $extension_id"
+        code --install-extension "$extension_id" --force
+    fi
+done
 
 echo "✅ 完了！"

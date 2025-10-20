@@ -40,11 +40,21 @@ while IFS= read -r extension_id; do
         skipped_count=$((skipped_count + 1))
     else
         echo "📦 インストール中: $extension_id"
-        if cursor --install-extension "$extension_id" --force; then
-            echo "✅ 成功: $extension_id"
+        install_output=$(cursor --install-extension "$extension_id" --force 2>&1)
+        install_exit_code=$?
+        
+        # インストール結果をチェック
+        if [ $install_exit_code -eq 0 ]; then
+            # 既にインストール済みの場合も成功として扱う
+            if echo "$install_output" | grep -q "already installed"; then
+                echo "✅ 成功: $extension_id (既にインストール済み)"
+            else
+                echo "✅ 成功: $extension_id"
+            fi
             installed_count=$((installed_count + 1))
         else
             echo "❌ 失敗: $extension_id"
+            echo "   エラー: $install_output"
         fi
     fi
     echo ""
