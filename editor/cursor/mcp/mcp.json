@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ]
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "shadcn@canary",
+        "registry:mcp"
+      ],
+      "env": {
+        "REGISTRY_URL": "https://animate-ui.com/r/registry.json"
+      }
+    },
+    "html.to.design": {
+      "url": "https://h2d-mcp.divriots.com/cca5d698-22eb-4e77-bea9-714b65f517ce/sse"
+    },
+    "Figma": {
+      "url": "http://127.0.0.1:3845/sse"
+    }
+  }
+}

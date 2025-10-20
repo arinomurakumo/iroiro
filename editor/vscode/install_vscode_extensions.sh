@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# VSCode Extension 一括インストールスクリプト
+# 作成者: キラリ ✨💻
+
+echo "🚀 VSCode Extension 一括インストールを開始します！"
+echo "================================================"
+
+# エクステンション一覧ファイルの存在確認
+if [ ! -f "vscode_extensions.txt" ]; then
+    echo "❌ vscode_extensions.txt が見つかりません！"
+    echo "まず code --list-extensions > vscode_extensions.txt を実行してください"
+    exit 1
+fi
+
+# インストール済みエクステンションを取得
+echo "📋 現在インストール済みのエクステンションを確認中..."
+installed_extensions=$(code --list-extensions)
+
+# カウンター
+total_count=0
+installed_count=0
+skipped_count=0
+
+echo "🔧 エクステンションのインストールを開始します..."
+echo ""
+
+# ファイルからエクステンションIDを読み込んでインストール
+while IFS= read -r extension_id; do
+    # 空行をスキップ
+    if [ -z "$extension_id" ]; then
+        continue
+    fi
+    
+    total_count=$((total_count + 1))
+    
+    # 既にインストール済みかチェック
+    if echo "$installed_extensions" | grep -q "^$extension_id$"; then
+        echo "⏭️  スキップ: $extension_id (既にインストール済み)"
+        skipped_count=$((skipped_count + 1))
+    else
+        echo "📦 インストール中: $extension_id"
+        if code --install-extension "$extension_id" --force; then
+            echo "✅ 成功: $extension_id"
+            installed_count=$((installed_count + 1))
+        else
+            echo "❌ 失敗: $extension_id"
+        fi
+    fi
+    echo ""
+done < vscode_extensions.txt
+
+echo "================================================"
+echo "🎉 インストール完了！"
+echo "📊 統計:"
+echo "   - 総数: $total_count"
+echo "   - 新規インストール: $installed_count"
+echo "   - スキップ: $skipped_count"
+echo "================================================"
+
+if [ $installed_count -gt 0 ]; then
+    echo "🔄 VSCodeを再起動することをお勧めします！"
+fi

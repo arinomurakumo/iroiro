@@ -1,0 +1,19 @@
+{
+	"name": "theme-monokai-custom",
+	"displayName": "%displayName%",
+	"description": "%description%",
+	"version": "1.0.0",
+	"publisher": "vscode",
+	"engines": {
+		"vscode": "*"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "theme-monokai-custom",
+				"uiTheme": "vs-dark",
+				"path": "./themes/monokai-color-theme.json"
+			}
+		]
+	}
+}

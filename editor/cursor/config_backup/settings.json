@@ -1,0 +1,96 @@
+{
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[postcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "breadcrumbs.enabled": true,
+  "css.validate": false,
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
+    "source.fixAll.eslint": "never",
+    "source.fixAll.tslint": "never"
+  },
+  "editor.detectIndentation": false,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 18,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "eslint.packageManager": "yarn",
+  "files.associations": {
+    "*.vue": "vue",
+    "*.css": "postcss"
+  },
+  "files.exclude": {
+    "**/.git": false
+  },
+  "files.watcherExclude": {
+    "**/images/**": true,
+    "**/uploads/**": true
+  },
+  "html.validate.styles": false,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "sasslint.packageManager": "yarn",
+  "scssLint.configDir": "",
+  "sync.forceUpload": false,
+  "sync.gist": "511bbaa462155fd642f44d4d4428cc20",
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.includeLanguages": {
+    "typescriptreact": "html"
+  },
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.integrated.fontSize": 16,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "workbench.colorTheme": "theme-monokai-custom",
+  "workbench.editor.closeEmptyGroups": false,
+  "workbench.iconTheme": "seti",
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "tailwindCSS.experimental.classRegex": ["classNames\\(([^)]*)\\)"],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.editor.empty.hint": "hidden",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "files.defaultLanguage": "japa",
+  "workbench.activityBar.orientation": "vertical",
+  "update.releaseTrack": "prerelease",
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.copyWithSyntaxHighlighting": false
+}

@@ -1,0 +1,131 @@
+body {
+
+--file-line-width: 100% !important;
+
+}
+
+  
+
+body {
+
+--line-width: 50rem;
+
+}
+
+  
+
+.markdown-preview-view *,
+
+.markdown-source-view *,
+
+.markdown-source-view .cm-editor {
+
+line-height: 1.75 !important;
+
+}
+
+  
+
+.cm-list-1,
+
+.cm-list-2,
+
+.cm-list-3,
+
+.cm-list-4,
+
+.cm-list-5,
+
+.cm-list-6 {
+
+padding-left: 0.5rem;
+
+}
+
+  
+  
+
+.cm-s-obsidian,
+
+.markdown-source-view,
+
+.markdown-source-view .cm-scroller,
+
+.is-live-preview,
+
+.markdown-rendered {
+
+.table-view,
+
+table {
+
+width: 100% !important;
+
+clear: inline-start;
+
+  
+
+tbody {
+
+height: fit-content;
+
+}
+
+}
+
+  
+  
+
+/* Obsidian での全幅テーブル */
+
+.markdown-preview-view table {
+
+width: 100%;
+
+table-layout: fixed;
+
+}
+
+.markdown-preview-view th, .markdown-preview-view td {
+
+word-wrap: break-word;
+
+text-align: left;
+
+}
+
+  
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
+
+max-width: 100%;
+
+width: 100%;
+
+}
+
+  
+
+.wideTable table {
+
+min-width: 100%;
+
+}
+
+  
+
+.table-wrapper {
+
+min-width: 100%;
+
+}
+
+  
+
+table tr:first-child th {
+
+background-color: #2b2b2b;
+
+}

@@ -1,0 +1,15 @@
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = false
+[user]
+	name = 
+	email = 
+ [core]
+    hooksPath = ~/.config/git/hooks
+[alias]
+    tree = log --graph --pretty=format:'%x09%C(auto) %h %Cgreen %ar %Creset%x09by"%C(cyan ul)%an%Creset"<%ae> %x09%C(auto)%s %d '

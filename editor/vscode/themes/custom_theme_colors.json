@@ -1,0 +1,15 @@
+{
+  "name": "theme-monokai-custom",
+  "type": "custom",
+  "colors": {
+    "note": "カスタムテーマの色設定は手動で設定する必要があります",
+    "suggestedColors": {
+      "background": "#1e1e1e",
+      "foreground": "#d4d4d4",
+      "selection": "#264f78",
+      "cursor": "#ffffff",
+      "lineHighlight": "#2a2d2e"
+    }
+  },
+  "exportDate": "2025-10-20T02:14:46Z"
+}
