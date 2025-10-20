@@ -40,6 +40,8 @@ while IFS= read -r extension_id; do
         skipped_count=$((skipped_count + 1))
     else
         echo "📦 インストール中: $extension_id"
+        # SSL証明書エラーを回避するための環境変数設定
+        export NODE_TLS_REJECT_UNAUTHORIZED=0
         install_output=$(cursor --install-extension "$extension_id" --force 2>&1)
         install_exit_code=$?
         
